@@ -72,6 +72,8 @@ a {
 
 ul {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -88,7 +90,6 @@ ul {
 
 .header-link:hover {
     color: var(--color-brand-light);
-    font-weight: 600;
 }
 
 footer a {
@@ -120,6 +121,31 @@ footer a:hover {
     color: var(--color-brand-dark);
 }
 
+/* Header */
+.header {
+    background-color: #31261A;
+}
+
+.header-menu {
+    display: flex;
+    gap: 64px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.header-nav {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
 /* Hero Section */
 .hero-title {
     color: var(--color-primary-light);
@@ -138,6 +164,10 @@ footer a:hover {
 }
 
 /* Advantages Section */
+.advantages-section {
+    background-color: var(--color-brand-light);
+}
+
 .hidden {
     position: absolute;
     left: -100000px;
@@ -148,11 +178,14 @@ footer a:hover {
 }
 
 .advantages-list {
-    background-color: var(--color-brand-light);
-    color: var(--color-primary-light);
+    padding: 16px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
 }
 
 .advantages-item {
+    color: var(--color-primary-light);
     font-size: 20px;
     font-weight: 300;
 }
@@ -169,6 +202,16 @@ footer a:hover {
 }
 
 /* Traditions Section */
+.traditions-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.traditions-text.limited {
+    max-width: 340px;
+}
+
 .traditions-text .brand {
     color: var(--color-brand-light);
     font-weight: 600;
@@ -184,6 +227,10 @@ footer a:hover {
 
 .traditions-title {
     margin-bottom: 42px;
+}
+
+.traditions-content {
+    max-width: 710px;
 }
 
 /* Bakers Section */
@@ -202,6 +249,18 @@ footer a:hover {
 }
 
 /* Formats Section */
+.formats-list {
+    display: flex;
+    gap: 20px;
+}
+
+.format-card {
+    height: 450px;
+    padding: 24px;
+    border: 1px solid lightgray; /* remove */
+    border-radius: 16px;
+}
+
 .format-subtitle {
     font-size: 24px;
     font-weight: 600;
@@ -214,6 +273,10 @@ footer a:hover {
 
 .format-title {
     margin-bottom: 80px;
+}
+
+.formats-item {
+    flex-basis: calc((100% - 40px) / 3);
 }
 
 /* Footer */
