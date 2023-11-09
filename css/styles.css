@@ -307,6 +307,37 @@ footer a:hover {
     flex-basis: calc((100% - 40px) / 3);
 }
 
+.format-arrow {
+    fill: var(--color-primary-light);
+}
+
+/* Carousel */
+.carousel-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid var(--color-primary-dark);
+    cursor: pointer;
+}
+
+.carousel-button:hover {
+    background-color: var(--color-primary-dark);
+    border: 1px solid var(--color-primary-light);
+}
+
+.carousel-button:hover .carousel-arrow {
+    fill: var(--color-primary-light);
+}
+
+.carousel-arrow {
+    fill: var(--color-primary-dark);
+}
+
 /* Footer */
 .copyright {
     font-size: 14px;
@@ -319,4 +350,12 @@ footer a:hover {
     background-size: cover;
     background-color: var(--color-primary-dark);
     background-position: center;
+}
+
+.address-icon {
+    fill: var(--color-primary-light);
+}
+
+.address-icon:hover {
+    fill: var(--color-secondary-dark);
 }
