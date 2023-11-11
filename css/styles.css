@@ -41,7 +41,9 @@
 
 /* Base */
 
-* {
+*,
+*::after,
+*::before {
     box-sizing: border-box;
 }
 
@@ -59,6 +61,10 @@ h1, h2, h3, h4, h5, p {
     margin-top: 0;
 }
 
+h2 {
+    line-height: 84px;
+}
+
 .section {
     padding: 48px 0;
 }
@@ -69,6 +75,7 @@ address {
 
 a {
     text-decoration: none;
+    display: inline-block;
 }
 
 ul {
@@ -270,9 +277,51 @@ footer a:hover {
     box-shadow: -16px 16px 0 0 var(--color-primary-light), -16px 16px 0 2px var(--color-secondary-dark);
 }
 
+.bakers-list {
+    display: flex;
+    gap: 40px 30px;
+    flex-wrap: wrap;
+}
+
+.bakers-item {
+    flex-basis: calc((100% - 30px) / 2);
+}
+
+.baker-card {
+    display: flex;
+    gap: 30px;
+}
+
+.baker-text p {
+    margin-bottom: 24px;
+}
+
+.baker-text p:last-child {
+    margin-bottom: 0;
+}
+
 /* Contacts Section*/
+.contact-section {
+    padding-bottom: 96px;
+}
+
 .contact-title {
     margin-bottom: 16px;
+}
+
+.contacts-container {
+    display: flex;
+    gap: 32px;
+}
+
+.contact-form {
+    flex-basis: calc((100% - 32px) / 2);
+}
+
+.contact-map {
+    flex-shrink: 0;
+    border: none;
+    border-radius: 16px;
 }
 
 /* Formats Section */
@@ -311,6 +360,12 @@ footer a:hover {
     fill: var(--color-primary-light);
 }
 
+.formats-container {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
 /* Carousel */
 .carousel-button {
     display: flex;
@@ -323,6 +378,7 @@ footer a:hover {
     background-color: transparent;
     border: 1px solid var(--color-primary-dark);
     cursor: pointer;
+    flex-shrink: 0;
 }
 
 .carousel-button:hover {
@@ -350,6 +406,33 @@ footer a:hover {
     background-size: cover;
     background-color: var(--color-primary-dark);
     background-position: center;
+    padding: 32px 0 32px 0;
+}
+
+.footer-container {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-nav {
+    flex-basis: calc(100% / 2);
+    display: flex;
+    gap: 20px;
+}
+
+.footer-address {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-logo,
+.footer-menu {
+    flex-grow: 1;
+}
+
+.footer-address-links,
+.address-policy {
+    flex-grow: 1;
 }
 
 .address-icon {
