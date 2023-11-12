@@ -94,6 +94,7 @@ ul {
 /* Links */
 .header-link {
     color: var(--color-primary-light);
+    transition: color .3s;
 }
 
 .header-link:hover {
@@ -102,6 +103,7 @@ ul {
 
 footer a {
     color: var(--color-primary-light);
+    transition: color .3s;
 }
 
 footer a:hover {
@@ -122,6 +124,7 @@ footer a:hover {
     cursor: pointer;
     font-weight: 600;
     padding: 16px 32px;
+    transition: background-color .3s, color .3s;
 }
 
 .button:hover {
@@ -131,7 +134,11 @@ footer a:hover {
 
 /* Header */
 .header {
-    background-color: #31261A;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 32px;
 }
 
 .header-menu {
@@ -165,7 +172,11 @@ footer a:hover {
 
 .hero-section {
     padding: 272px 0;
-    background-image: url('../images/hero-image.jpg');
+    background-image: linear-gradient(103deg, 
+    rgba(18, 18, 17, 0.78) 2.03%, 
+    rgba(18, 18, 17, 0.60) 58.46%, 
+    rgba(18, 18, 17, 0.00) 90.36%), 
+    url('../images/hero-image.jpg');
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
@@ -261,8 +272,8 @@ footer a:hover {
 
 .baker-title {
     margin-bottom: 80px;
-    max-width: 520px;
     margin: 0 auto 80px;
+    position: relative;
 }
 
 .baker-title::before, .baker-title::after {
@@ -270,6 +281,16 @@ footer a:hover {
     display: block;
     border: 2px solid var(--color-secondary-light);
     width: 352px;
+    position: absolute;
+    bottom: 24px;
+}
+
+.baker-title::before {
+    left: 0;
+}
+
+.baker-title::after {
+    right: 0;
 }
 
 .baker-photo {
@@ -336,6 +357,11 @@ footer a:hover {
     padding: 24px;
     border: 1px solid lightgray; /* remove */
     border-radius: 16px;
+    transition: transform .3s;
+}
+
+.format-card:hover {
+    transform: scale(1.05);
 }
 
 .format-subtitle {
@@ -379,6 +405,7 @@ footer a:hover {
     border: 1px solid var(--color-primary-dark);
     cursor: pointer;
     flex-shrink: 0;
+    transition: background-color .3s, border .3s;
 }
 
 .carousel-button:hover {
@@ -392,6 +419,11 @@ footer a:hover {
 
 .carousel-arrow {
     fill: var(--color-primary-dark);
+    transition: fill .3s;
+}
+
+.carousel-button.next {
+    transform: rotate(180deg);
 }
 
 /* Footer */
@@ -407,38 +439,93 @@ footer a:hover {
     background-color: var(--color-primary-dark);
     background-position: center;
     padding: 32px 0 32px 0;
+    position: relative;
 }
 
 .footer-container {
     display: flex;
-    gap: 20px;
+    gap: 166px;
 }
 
-.footer-nav {
-    flex-basis: calc(100% / 2);
-    display: flex;
-    gap: 20px;
-}
-
-.footer-address {
-    display: flex;
-    gap: 20px;
-}
-
-.footer-logo,
-.footer-menu {
-    flex-grow: 1;
-}
-
-.footer-address-links,
+.footer-nav,
+.footer-address,
 .address-policy {
-    flex-grow: 1;
+    flex-basis: calc((100% - 606px) / 3);
+}
+
+footer a {
+    margin-bottom: 16px;
 }
 
 .address-icon {
     fill: var(--color-primary-light);
+    transition: fill .3s;
 }
 
 .address-icon:hover {
     fill: var(--color-secondary-dark);
+}
+
+.footer::before,
+.footer::after {
+    content: '';
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    bottom: 0;
+}
+
+.footer::before {
+    background-image: url(../images/decor-bread-small.png);
+    width: 180px;
+    height: 120px;
+}
+
+.footer::after {
+    background-image: url(../images/decor-bread-large.png);
+    width: 380px;
+    height: 190px;
+    right: 50px;
+}
+
+.footer-social-icon {
+    display: flex;
+    gap: 22px;
+}
+
+/* Modal Window */
+.backdrop {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    transition: opacity .3s, visibility .3s;
+}
+
+.modal {
+    width: 100%;
+    max-width: 880px;
+    height: 100%;
+    max-height: 880px;
+    background-color: var(--color-primary-light);
+    border-radius: 32px;
+    position: relative;;
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: none;
+    pointer-events: none;
+}
+
+.modal-btn-close {
+    position: absolute;
+    top: 40px;
+    right: 40px;
 }

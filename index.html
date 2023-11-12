@@ -33,7 +33,9 @@
               </li>
             </ul>
           </nav>
-          <button class="button" type="button">Замовити дзвінок</button>
+          <button class="button modal-btn-open" type="button">
+            Замовити дзвінок
+          </button>
         </div>
       </div>
     </header>
@@ -81,7 +83,7 @@
       <section class="bakers-section section" id="bakers-section">
         <div class="container">
           <h2 class="baker-title section-title centered">
-            Наші найкращі <span class="accent">шеф - кухарі</span>
+            Наші найкращі <br /><span class="accent">шеф - кухарі</span>
           </h2>
           <ul class="bakers-list">
             <li class="bakers-item">
@@ -111,7 +113,7 @@
                   <div class="baker-text">
                     <p>Привіт, я Влад!</p>
                     <p>
-                      Мій кодитерський стаж вже 18 років. SHOP BEKERY - це наша
+                      Мій кондитерський стаж вже 18 років. SHOP BEKERY - це наша
                       любов, з якою ми ділимось кожен раз з Вами через нашу
                       випічку!
                     </p>
@@ -170,7 +172,7 @@
                 </article>
               </li>
             </ul>
-            <button class="carousel-button" type="button">
+            <button class="carousel-button next" type="button">
               <svg class="carousel-arrow" width="16" height="16">
                 <use href="./images/icons.svg#icon-arrow"></use>
               </svg>
@@ -204,12 +206,12 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-container">
+          <div class="footer-logo">
+            <a href="./index.html"
+              ><img src="./images/logo.svg" alt="Логотип сучасної пекарні"
+            /></a>
+          </div>
           <nav class="footer-nav">
-            <div class="footer-logo">
-              <a href="./index.html"
-                ><img src="./images/logo.svg" alt="Логотип сучасної пекарні"
-              /></a>
-            </div>
             <ul class="footer-menu">
               <li>
                 <a href="#traditions-section">Наші традиції</a>
@@ -239,6 +241,9 @@
                   >Україна, м. Київ, вул. Січових Стрільців 54</a
                 >
               </li>
+            </ul>
+            <!-- Footer Social Icons -->
+            <ul class="footer-social-icon">
               <li>
                 <a href="#">
                   <svg class="address-icon" width="32" height="32">
@@ -254,15 +259,21 @@
                 </a>
               </li>
             </ul>
-            <div class="address-policy">
-              <a class="adress-link" href="#" target="_blank"
-                >Політика конфіденційності</a
-              >
-              <p class="copyright">&copy; 2022 Дані захищені</p>
-            </div>
           </address>
+          <div class="address-policy">
+            <a class="adress-link" href="#" target="_blank"
+              >Політика конфіденційності</a
+            >
+            <p class="copyright">&copy; 2022 Дані захищені</p>
+          </div>
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden">
+      <div class="modal">
+        <button class="modal-btn-close" type="button">Close</button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
