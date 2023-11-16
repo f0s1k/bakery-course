@@ -137,7 +137,13 @@
             <ul class="formats-list">
               <li class="formats-item">
                 <article class="format-card">
+                  <div class="format-none"></div>
                   <h3 class="format-subtitle" lang="en">Walrus</h3>
+                  <img
+                    class="format-card-img"
+                    src="./images/walrus-format.jpg"
+                    alt="Walrus Image"
+                  />
                   <div class="format-text">
                     <p>Площа: до 120 м2</p>
                     <p>Меню: розширене меню</p>
@@ -151,7 +157,13 @@
               </li>
               <li class="formats-item">
                 <article class="format-card">
+                  <div class="format-none"></div>
                   <h3 class="format-subtitle" lang="en">Horseshoe</h3>
+                  <img
+                    class="format-card-img"
+                    src="./images/horseshoe-format.jpg"
+                    alt="Horseshoe Image"
+                  />
                   <div class="format-text">
                     <p>Площа: до 25 м2</p>
                     <p>Меню: найпопулярніші позиції меню</p>
@@ -162,7 +174,13 @@
               </li>
               <li class="formats-item">
                 <article class="format-card">
+                  <div class="format-none"></div>
                   <h3 class="format-subtitle" lang="en">Handlebar</h3>
+                  <img
+                    class="format-card-img"
+                    src="./images/handlebar-format.jpg"
+                    alt="Handlebar Image"
+                  />
                   <div class="format-text">
                     <p>Площа: до 15 м2</p>
                     <p>Меню: найпопулярніші позиції меню</p>
@@ -201,6 +219,9 @@
                     type="text"
                     name="user-name"
                     placeholder="Ім'я"
+                    required
+                    minlength="2"
+                    maxlength="20"
                   />
                 </div>
                 <div class="contact-form-field">
@@ -213,6 +234,10 @@
                     type="tel"
                     name="user-tel"
                     placeholder="Телефон"
+                    required
+                    minlength="10"
+                    maxlength="13"
+                    pattern="^\+[0-9]{12}"
                   />
                 </div>
                 <div class="contact-form-field">
@@ -225,6 +250,9 @@
                     type="email"
                     name="user-email"
                     placeholder="Електронна пошта"
+                    required
+                    minlength="6"
+                    maxlength="30"
                   />
                 </div>
 
@@ -325,7 +353,7 @@
         <p class="modal-form-subtitle">
           Залишіть заявку та наш спеціаліст зв'яжеться з Вами!
         </p>
-        <form name="modal-form" autocomplete="off" novalidate>
+        <form name="modal-form" autocomplete="off">
           <div class="modal-form-field">
             <label class="modal-form-label hidden" for="user-name">Ім'я</label>
             <input
@@ -334,6 +362,9 @@
               type="text"
               name="user-name"
               placeholder="Ім'я"
+              required
+              minlength="2"
+              maxlength="20"
             />
           </div>
           <div class="modal-form-field">
@@ -346,6 +377,10 @@
               type="tel"
               name="user-tel"
               placeholder="Телефон"
+              required
+              minlength="10"
+              maxlength="13"
+              pattern="^\+[0-9]{12}"
             />
           </div>
           <div class="modal-form-field">
@@ -358,6 +393,9 @@
               type="email"
               name="user-email"
               placeholder="Електронна пошта"
+              required
+              minlength="6"
+              maxlength="30"
             />
           </div>
 
