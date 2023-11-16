@@ -47,6 +47,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     color: var(--color-primary-dark);
     font-family: 'Poppins', sans-serif;
@@ -554,9 +558,21 @@ footer a {
     max-height: 880px;
     background-color: var(--color-primary-light);
     border-radius: 32px;
-    position: relative;;
+    position: relative;
     padding: 128px;
     overflow-y: auto;
+}
+
+.modal::after {
+    content: '';
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    bottom: 0;
+    right: 0;
+    background-image: url(../images/modal-bread.png);
+    width: 105px;
+    height: 160px;
 }
 
 .backdrop.is-hidden {
