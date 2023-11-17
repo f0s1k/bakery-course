@@ -1,0 +1,57 @@
+.baker-subtitle {
+	font-size: 40px;
+	font-weight: 600;
+}
+
+.baker-title {
+	margin-bottom: 80px;
+	margin: 0 auto 80px;
+	position: relative;
+}
+
+.baker-title::before,
+.baker-title::after {
+	content: '';
+	display: block;
+	border: 2px solid var(--color-secondary-light);
+	width: 352px;
+	position: absolute;
+	bottom: 24px;
+}
+
+.baker-title::before {
+	left: 0;
+}
+
+.baker-title::after {
+	right: 0;
+}
+
+.baker-photo {
+	border-radius: 4px 4px 4px 200px;
+	box-shadow: -16px 16px 0 0 var(--color-primary-light),
+		-16px 16px 0 2px var(--color-secondary-dark);
+}
+
+.bakers-list {
+	display: flex;
+	gap: 40px 30px;
+	flex-wrap: wrap;
+}
+
+.bakers-item {
+	flex-basis: calc((100% - 30px) / 2);
+}
+
+.baker-card {
+	display: flex;
+	gap: 30px;
+}
+
+.baker-text p {
+	margin-bottom: 24px;
+}
+
+.baker-text p:last-child {
+	margin-bottom: 0;
+}
