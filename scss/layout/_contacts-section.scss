@@ -1,27 +1,27 @@
-.contact-section {
+.contacts-section {
 	padding-bottom: 96px;
-}
 
-.contact-title {
-	margin-bottom: 16px;
-}
+	&__container {
+		display: flex;
+		gap: 32px;
+	}
 
-.contacts-container {
-	display: flex;
-	gap: 32px;
-}
+	&__form {
+		flex-basis: calc((100% - 32px) / 2);
+	}
 
-.contact-form {
-	flex-basis: calc((100% - 32px) / 2);
-}
+	&__title {
+		margin-bottom: 16px;
+	}
 
-.contact-map {
-	flex-shrink: 0;
-	border: none;
-	border-radius: 16px;
-}
+	&__form-subtitle {
+		margin: 16px 0 42px 0;
+		color: var(--color-brand-dark);
+	}
 
-.contacts-form-sub {
-	margin: 16px 0 42px 0;
-	color: var(--color-brand-dark);
+	&__map {
+		flex-shrink: 0;
+		border: none;
+		border-radius: 16px;
+	}
 }
