@@ -1,6 +1,5 @@
 @import './utils/fonts';
 @import './utils/variables';
-@import './utils/mixins';
 @import './utils/texts';
 @import './utils/utils';
 @import './utils/section';
@@ -14,11 +13,12 @@
 @import './components/contacts-form';
 @import './components/modal-form';
 
-@import './layout/header';
-@import './layout/hero-section';
-@import './layout/advantages-section';
-@import './layout/traditions-section';
-@import './layout/bakers-section';
-@import './layout/formats-section';
-@import './layout/contacts-section';
-@import './layout/footer';
+@import './layouts/header';
+@import './layouts/hero-section';
+@import './layouts/advantages-section';
+@import './layouts/traditions-section';
+@import './layouts/bakers-section';
+@import './layouts/formats-section';
+@import './layouts/contacts-section';
+@import './layouts/footer';
+@import './layouts/mobile-menu';
