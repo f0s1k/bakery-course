@@ -43,8 +43,36 @@
 						</svg>
 					</button>
 					<div class="mobile-menu">
+						<div class="mobile-menu__logo">
+							<img
+								src="./images/logo-mobile.svg"
+								alt="Логотип сучасної пекарні для мобільних"
+							/>
+						</div>
+						<ul class="mobile-menu__nav">
+							<li>
+								<a class="mobile-menu__link" href="#traditions-section"
+									>Наші традиції</a
+								>
+							</li>
+							<li>
+								<a class="mobile-menu__link" href="#bakers-section"
+									>Шеф-кухарі</a
+								>
+							</li>
+							<li>
+								<a class="mobile-menu__link" href="#formats-section">Формати</a>
+							</li>
+							<li>
+								<a class="mobile-menu__link" href="#contacts-section"
+									>Контакти</a
+								>
+							</li>
+						</ul>
 						<button class="mobile-menu__btn-close menu-btn-close" type="button">
-							Close
+							<svg width="24" height="24">
+								<use href="./images/icons.svg#icon-cross"></use>
+							</svg>
 						</button>
 					</div>
 				</div>
@@ -318,11 +346,11 @@
 					</div>
 				</div>
 			</section>
-			<section class="contacts-section section" id="contacts-section">
+			<section class="contacts-section" id="contacts-section">
 				<div class="container">
 					<div class="contacts-section__container">
 						<div class="contacts-section__form">
-							<h2 class="contacts-section__title section__title">
+							<h2 class="contacts-section__title">
 								Приєднуйся до мережі пекарень
 							</h2>
 							<p class="contacts-section__form-subtitle">
@@ -469,7 +497,11 @@
 		</footer>
 		<div class="backdrop is-hidden">
 			<div class="modal">
-				<button class="modal-btn-close" type="button">Close</button>
+				<button class="modal-btn-close" type="button">
+					<svg width="24" height="24">
+						<use href="./images/icons.svg#icon-cross"></use>
+					</svg>
+				</button>
 				<h2 class="modal__form--title">Замовити дзвінок</h2>
 				<p class="modal__form--subtitle">
 					Залишіть заявку та наш спеціаліст зв'яжеться з Вами!

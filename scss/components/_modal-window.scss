@@ -26,4 +26,16 @@
 	position: absolute;
 	top: 40px;
 	right: 40px;
+	width: 24px;
+	height: 24px;
+	padding: 0;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	transition: transform 0.5s, fill 0.5s;
+
+	&:hover {
+		transform: rotate(360deg);
+		fill: var(--color-brand-light);
+	}
 }
