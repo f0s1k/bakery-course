@@ -3,22 +3,20 @@
 		margin-bottom: 80px;
 	}
 
-	&__container {
+	&__slider {
 		display: flex;
 		gap: 32px;
 		align-items: center;
 	}
 
-	&__list {
-		display: flex;
-		gap: 20px;
+	&__container {
+		overflow: hidden;
 	}
 
 	&__card {
 		height: 450px;
 		padding: 24px;
 		border-radius: 16px;
-		transition: transform 0.3s;
 		position: relative;
 		display: flex;
 		flex-direction: column;
@@ -39,14 +37,6 @@
 			border-radius: 16px;
 			z-index: -1;
 		}
-
-		&:hover {
-			transform: scale(1.05);
-		}
-	}
-
-	&__item {
-		flex-basis: calc((100% - 40px) / 3);
 	}
 
 	&__subtitle {
@@ -78,5 +68,13 @@
 
 	&__none {
 		flex-basis: 50%;
+	}
+
+	&__button {
+		display: none;
+
+		@media screen and (min-width: $bp-tablet) {
+			display: flex;
+		}
 	}
 }

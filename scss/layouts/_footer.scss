@@ -9,7 +9,17 @@
 
 	&__container {
 		display: flex;
-		gap: 166px;
+		gap: 0;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+
+		@media screen and (min-width: $bp-desktop) {
+			align-items: normal;
+			text-align: start;
+			flex-direction: row;
+			gap: 166px;
+		}
 	}
 
 	&::before,
@@ -29,9 +39,15 @@
 
 	&::after {
 		background-image: url(../images/decor-bread-large.png);
-		width: 380px;
-		height: 190px;
-		right: 50px;
+		width: 220px;
+		height: 100px;
+		right: 0;
+
+		@media screen and (min-width: $bp-desktop) {
+			width: 380px;
+			height: 190px;
+			right: 50px;
+		}
 	}
 
 	&__nav,
@@ -52,6 +68,12 @@
 	&__social-icon {
 		display: flex;
 		gap: 22px;
+		justify-content: center;
+
+		@media screen and (min-width: $bp-desktop) {
+			justify-content: normal;
+			flex-direction: row;
+		}
 	}
 
 	&__address-icon {

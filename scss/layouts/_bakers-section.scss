@@ -1,17 +1,24 @@
 .bakers-section {
 	&__title {
-		margin-bottom: 80px;
-		margin: 0 auto 80px;
+		margin: 0 auto 24px;
 		position: relative;
+
+		@media screen and (min-width: $bp-tablet) {
+			margin: 0 auto 80px;
+		}
 
 		&::before,
 		&::after {
-			content: '';
-			display: block;
-			border: 2px solid var(--color-secondary-light);
-			width: 352px;
-			position: absolute;
-			bottom: 24px;
+			display: none;
+
+			@media screen and (min-width: $bp-desktop) {
+				content: '';
+				display: block;
+				border: 2px solid var(--color-secondary-light);
+				width: 352px;
+				position: absolute;
+				bottom: 24px;
+			}
 		}
 
 		&::before {
@@ -25,33 +32,63 @@
 
 	&__list {
 		display: flex;
-		gap: 40px 30px;
-		flex-wrap: wrap;
+		gap: 40px;
+		flex-direction: column;
+
+		@media screen and (min-width: $bp-tablet) {
+			gap: 40px 30px;
+			flex-direction: row;
+		}
 	}
 
 	&__item {
-		flex-basis: calc((100% - 30px) / 2);
+		@media screen and (min-width: $bp-tablet) {
+			flex-basis: calc((100% - 30px) / 2);
+		}
 	}
 
 	&__card {
 		display: flex;
-		gap: 30px;
+		align-items: flex-start;
+		gap: 16px;
+
+		@media screen and (min-width: $bp-desktop) {
+			gap: 30px;
+		}
 	}
 
 	&__photo {
 		border-radius: 4px 4px 4px 200px;
 		box-shadow: -16px 16px 0 0 var(--color-primary-light),
 			-16px 16px 0 2px var(--color-secondary-dark);
+		width: 140px;
+		@media screen and (min-width: $bp-desktop) {
+			width: 240px;
+		}
 	}
 
 	&__subtitle {
-		font-size: 40px;
+		font-size: 24px;
 		font-weight: 600;
+
+		@media screen and (min-width: $bp-desktop) {
+			font-size: 40px;
+		}
 	}
 
 	&__text {
+		font-size: 14px;
+
+		@media screen and (min-width: $bp-tablet) {
+			font-size: 18px;
+		}
+
 		& p {
-			margin-bottom: 24px;
+			margin-bottom: 16px;
+
+			@media screen and (min-width: $bp-desktop) {
+				margin-bottom: 24px;
+			}
 		}
 
 		& p:last-child {

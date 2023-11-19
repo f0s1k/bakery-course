@@ -6,8 +6,12 @@
 	background-color: var(--color-primary-light);
 	border-radius: 32px;
 	position: relative;
-	padding: 128px;
+	padding: 68px;
 	overflow-y: auto;
+
+	@media screen and (min-width: $bp-tablet) {
+		padding: 128px;
+	}
 
 	&::after {
 		content: '';
